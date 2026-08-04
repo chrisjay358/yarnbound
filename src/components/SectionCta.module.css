@@ -1,0 +1,40 @@
+.ctaHeading {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin-block-end: 2rem;
+  max-width: 24ch;
+  margin-inline: auto;
+}
+
+.ctaDescription {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-block-end: 3.5rem;
+  max-width: 52ch;
+  margin-inline: auto;
+}
+
+/*
+ * Cream outline on the dark brown band — a solid button would vanish into the
+ * background. Inverts to a cream fill on hover so the action is unmistakable.
+ */
+.ctaBtn,
+.ctaBtn:link,
+.ctaBtn:visited {
+  background: transparent;
+  color: var(--color-cream);
+  box-shadow: inset 0 0 0 2px var(--color-cream);
+}
+
+.ctaBtn:hover,
+.ctaBtn:active {
+  background: var(--color-cream);
+  color: var(--brand-600);
+}
+
+/* Cream focus ring so it shows against the dark band (default outline is
+   nearly invisible on brown). */
+.ctaBtn:focus-visible {
+  outline: 2px solid var(--color-cream);
+  outline-offset: 3px;
+}

@@ -1,0 +1,24 @@
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--brand-500);
+  text-decoration: none;
+}
+
+.logoMark {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0; /* never let the icon squish */
+}
+
+.logoText {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.logoBox:focus-visible {
+  outline: 2px solid var(--brand-500);
+  outline-offset: 4px;
+  border-radius: 4px;
+}

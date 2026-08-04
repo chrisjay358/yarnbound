@@ -1,0 +1,140 @@
+.hero {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 9rem 3rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.primaryHeading {
+  font-size: 5rem;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: var(--brand-800);
+  margin-block-end: 3rem;
+}
+
+.heroDescription {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: var(--text-hero-description);
+  margin-block-end: 4.5rem;
+}
+
+.heroImgBox {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+ * THE FAN — three covers overlapping like a hand of cards, each offset and
+ * rotated. Sharp left corners (spine) + round right corners (pages) = a book
+ * seen face-on.
+ */
+.heroImg {
+  position: absolute;
+  height: 60%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 2px 12px 12px 2px;
+  box-shadow: 0 1.2rem 3rem rgba(61, 50, 41, 0.28);
+}
+
+/*
+ * Placeholder needs an EDGE — without one, three translucent shapes overlap
+ * into grey soup. A faint fill + hairline border keeps each reading as its
+ * own card while the covers load. Lighter shadow than a real cover, since
+ * it's a ghost.
+ */
+.heroImgPlaceholder {
+  background-color: rgba(140, 106, 79, 0.14);
+  border: 1px solid rgba(140, 106, 79, 0.22);
+  box-shadow: 0 1.2rem 3rem rgba(61, 50, 41, 0.12);
+}
+
+.heroImg1 {
+  transform: translateX(-22%) rotate(-8deg);
+  z-index: 1;
+}
+
+.heroImg2 {
+  transform: translateX(0) rotate(0deg);
+  z-index: 3; /* centre cover sits on top — the hero of the fan */
+}
+
+.heroImg3 {
+  transform: translateX(22%) rotate(8deg);
+  z-index: 2;
+}
+
+/**************************/
+/* BELOW 952px — stack, centre text */
+/**************************/
+@media (max-width: 59.5em) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-inline: 6rem;
+    gap: 8rem;
+  }
+
+  .heroTextbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroImgBox {
+    height: 40rem;
+  }
+
+  .heroImg {
+    height: 100%;
+  }
+}
+
+/**************************/
+/* BELOW 720px */
+/**************************/
+@media (max-width: 45em) {
+  .hero {
+    padding-block-start: 4.2rem;
+  }
+
+  .primaryHeading {
+    font-size: 4.2rem;
+  }
+
+  .heroImgBox {
+    height: 36rem;
+  }
+}
+
+/**************************/
+/* BELOW 552px */
+/**************************/
+@media (max-width: 35.5em) {
+  .hero {
+    padding-inline: 3rem;
+  }
+
+  .heroImgBox {
+    height: 30rem;
+  }
+
+  /* Tighten the fan so it doesn't overflow */
+  .heroImg1 {
+    transform: translateX(-16%) rotate(-6deg);
+  }
+
+  .heroImg3 {
+    transform: translateX(16%) rotate(6deg);
+  }
+}

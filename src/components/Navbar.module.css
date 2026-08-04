@@ -1,0 +1,50 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8rem;
+  padding-inline: 3rem;
+}
+
+/*
+ * Compound selector (both classes): the nav always has .navbar and gets
+ * .sticky conditionally. Higher specificity than .navbar alone, so these
+ * override cleanly regardless of source order.
+ */
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.05);
+  z-index: 999;
+}
+
+.btnMobileNav {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.iconMobileNav {
+  width: 4rem;
+  height: 3.8rem;
+  color: var(--text-dark);
+}
+
+/**************************/
+/* BELOW 720px */
+/**************************/
+@media (max-width: 45em) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+
+  .btnMobileNav {
+    display: block;
+    z-index: 1;
+  }
+}

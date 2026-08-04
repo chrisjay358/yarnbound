@@ -1,0 +1,114 @@
+.genreBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.genreItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 3.2rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 1.2rem;
+  background: #fff;
+  border: 1px solid var(--brand-200);
+  box-shadow: 0 0.2rem 0.6rem rgba(61, 50, 41, 0.06);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+}
+
+.genreItem:hover,
+.genreItem:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--brand-300);
+  box-shadow: 0 1rem 2.4rem rgba(61, 50, 41, 0.12);
+}
+
+.genreItem:focus-visible {
+  outline: 2px solid var(--brand-500);
+  outline-offset: 3px;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  background: var(--brand-100);
+  margin-block-end: 1.8rem;
+  transition: background-color 0.25s;
+}
+
+.genreItem:hover .iconWrap {
+  background: var(--brand-200);
+}
+
+.genreIcon {
+  font-size: 2.6rem;
+  color: var(--brand-600);
+}
+
+.genreName {
+  font-size: 1.9rem;
+  line-height: 1.3;
+  color: var(--brand-900);
+  margin-block-end: 0.8rem;
+}
+
+/*
+ * min-height reserves ~2 lines so every card is the same height regardless of
+ * whether its blurb wraps to one line or two
+ */
+.genreText {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  min-height: 4.5rem;
+}
+
+.allGenres {
+  margin-block-start: 4rem;
+  text-align: center;
+}
+
+.allGenresLink:link,
+.allGenresLink:visited {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--brand-600);
+  text-decoration: none;
+  border-block-end: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.allGenresLink:hover,
+.allGenresLink:focus-visible {
+  color: var(--brand-700);
+  border-block-end-color: var(--brand-400);
+}
+
+.allGenresLink:focus-visible {
+  outline: 2px solid var(--brand-500);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genreItem {
+    transition: none;
+  }
+  .genreItem:hover {
+    transform: none;
+  }
+}

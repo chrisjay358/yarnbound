@@ -1,0 +1,65 @@
+.testimonialBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+  gap: 3rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  height: 100%;
+  padding: 3rem;
+  background: #fff;
+  border: 1px solid var(--brand-200);
+  box-shadow: 0 0.2rem 0.6rem rgba(61, 50, 41, 0.06);
+  border-radius: 1.2rem;
+}
+
+.testimonialText {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #444;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block-start: auto; /* pins the person to the bottom, uneven quotes stay aligned */
+}
+
+.personImg {
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Initials fallback (from AuthorPhoto) styled to match the avatar's footprint. */
+.personInitials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--brand-600);
+  background: var(--brand-100);
+}
+
+.personName {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.personMeta {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}

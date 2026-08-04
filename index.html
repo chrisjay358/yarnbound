@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Primary meta -->
+    <title>Yarnbound — Find your next great read</title>
+    <meta
+      name="description"
+      content="Discover books through trending shelves and genres, track what you're reading, and build the reading lists you've been meaning to start. Find any book — even from a half-remembered line."
+    />
+    <link rel="canonical" href="https://yarnbound.vercel.app/" />
+    <meta name="theme-color" content="#ddd2ca" />
+
+    <!-- Open Graph (LinkedIn, Slack, iMessage, Facebook previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Yarnbound" />
+    <meta property="og:url" content="https://yarnbound.vercel.app/" />
+    <meta property="og:title" content="Yarnbound — Find your next great read" />
+    <meta
+      property="og:description"
+      content="Discover books through trending shelves and genres, track what you're reading, and build the reading lists you've been meaning to start."
+    />
+    <meta
+      property="og:image"
+      content="https://yarnbound.vercel.app/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter/X card (falls back to OG; this fine-tunes the X preview) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Yarnbound — Find your next great read"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover books through trending shelves and genres, track what you're reading, and build reading lists."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yarnbound.vercel.app/og-image.png"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Yarnbound",
+        "url": "https://yarnbound.vercel.app/",
+        "description": "Discover books through trending shelves and genres, track what you're reading, and build reading lists. Find any book — even from a half-remembered line."
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

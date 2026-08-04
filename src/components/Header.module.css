@@ -1,0 +1,25 @@
+.header {
+  /*
+   * 100svh ("small viewport height") measures the screen WITHOUT mobile
+   * browser chrome, so the hero can't overflow behind Safari's toolbar.
+   * 100vh first as the fallback for browsers that don't understand svh.
+   */
+  min-height: 100vh;
+  min-height: 100svh;
+
+  background: var(--color-hero-bg);
+  display: flex;
+  flex-direction: column;
+
+  /* The fanned covers rotate past the edge; clip horizontally so they don't
+     create a page-wide scrollbar. */
+  overflow-x: hidden;
+
+  /* Anchor for the absolutely-positioned covers inside the hero. */
+  position: relative;
+}
+
+/* When the nav goes fixed (out of flow), reserve its 8rem so nothing jumps. */
+.sticky {
+  padding-block-start: 8rem;
+}

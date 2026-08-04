@@ -1,0 +1,40 @@
+.header {
+  margin-block-end: 6rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  background: #ffefe3;
+  color: #8c6a4f;
+  padding: 1rem 1.6rem;
+  font-weight: 800;
+  border-radius: 10rem;
+  margin-block-end: 1.6rem;
+}
+
+.heading {
+  font-size: 3.6rem;
+  margin-block-end: 2.5rem;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+/**************************/
+/* BELOW 720px (Smaller tablets) */
+/**************************/
+@media (max-width: 45em) {
+  .heading {
+    font-size: 3.2rem;
+  }
+
+  .header {
+    margin-block-end: 4.5rem;
+  }
+}
